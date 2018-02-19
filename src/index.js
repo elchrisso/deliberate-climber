@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { ApolloProvider } from 'react-apollo'
+import 'bootstrap/dist/css/bootstrap.css';
 
 import client from './Client'
 

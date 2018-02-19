@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { SeasonAdd } from './seasons/SeasonAdd'
+import SeasonAdd from './seasons/SeasonAdd'
 import SeasonsList from './seasons/SeasonsList'
 
 class App extends Component {

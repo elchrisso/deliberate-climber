@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
+import { ListGroup, ListGroupItem, ListGroupItemHeading } from 'reactstrap'
 
 import seasonsService from './Service'
 
@@ -15,14 +16,14 @@ class SeasonsList extends Component {
         }
 
         return (
-        <div>
-            <h1>Seasons List</h1>
-            <ul>
+        <ListGroup>
+            <ListGroupItemHeading>Seasons List</ListGroupItemHeading>
+            <ListGroupItem>
             {seasons.map((season) => {
                 return <li>{season.name}</li>
             })}
-            </ul>
-        </div>
+            </ListGroupItem>
+        </ListGroup>
         )
     }
 }
