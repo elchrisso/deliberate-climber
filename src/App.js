@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Switch, Route } from 'react-router-dom'
 import './App.css';
 
 import SeasonAdd from './seasons/SeasonAdd'
@@ -9,8 +9,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SeasonAdd/>
-        <SeasonsList/>
+        <Switch>
+          <Route exact path="/" component={SeasonsList}/>
+          <Route path="/seasons" component={SeasonsList} />
+          <Route path="/addseason" component={SeasonAdd} />
+        </Switch>
       </div>
     );
   }
