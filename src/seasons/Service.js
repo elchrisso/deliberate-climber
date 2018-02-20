@@ -10,6 +10,18 @@ class seasonsService {
         }
     `
 
+    seasonById = gql`
+        query ($id: ID!) {
+            Season (id: $id) {
+                name
+                sessions {
+                id
+                type
+                date
+                }
+            }
+        }`
+
     addSeason = gql`
         mutation ($name: String!, $activity: String!, $description: String!, $startDate: DateTime!, $numberOfWeeks: Int!) {
             createSeason (
