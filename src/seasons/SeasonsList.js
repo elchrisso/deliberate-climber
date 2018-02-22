@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
-import { ListGroup, ListGroupItem, ListGroupItemHeading } from 'reactstrap'
+import { ListGroup, ListGroupItem, ListGroupItemHeading, Badge } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 import seasonsService from './Service'
 
@@ -18,11 +19,14 @@ class SeasonsList extends Component {
         return (
         <ListGroup>
             <ListGroupItemHeading>Seasons List</ListGroupItemHeading>
-            <ListGroupItem>
             {seasons.map((season) => {
-                return <li>{season.name}</li>
+                return (
+                    <ListGroupItem className="justify-content-between">
+                <NavLink className="nav-link" to={`/seasons/details/${season.id}`}>{season.id}</NavLink>
+                <Badge pill>14</Badge>
+              </ListGroupItem>
+                )
             })}
-            </ListGroupItem>
         </ListGroup>
         )
     }
