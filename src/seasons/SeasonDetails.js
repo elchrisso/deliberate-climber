@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import { NavLink } from 'react-router-dom'
 
-import SessionList from '../sessions/SessionList'
 import seasonsService from './Service'
+import SessionAdd from '../sessions/SessionAdd'
+import SessionList from '../sessions/SessionList'
 
 class SeasonDetails extends Component {
     
@@ -20,6 +21,8 @@ class SeasonDetails extends Component {
                     )
                 })}
                 <SessionList/>
+                <p/>
+                <SessionAdd/>
             </div>
          )
     }

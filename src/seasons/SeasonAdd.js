@@ -36,32 +36,32 @@ class SeasonAdd extends Component {
     render(){
         return(
             <div>
-        <Form onSubmit={this.handleAddSeason}>
-        <FormGroup>
-            <Label for="season-name">Season Name</Label>
-            <Input id="season-name" type="text" onChange={(evt) => this.setState({ name: evt.target.value })}/>
-          </FormGroup>
-          <FormGroup>
-            <Label for="activity-name">Activity Name</Label>
-            <Input id="activity-name" type="text" onChange={(evt) => this.setState({ activity: evt.target.value })}/>
-          </FormGroup>
-          <Row>
-            <FormGroup>
-                <Label for="start-date">Start Date</Label>
-                <Input id="start-date" type="date" onChange={(evt) => this.setState({ startDate: evt.target.value })}/>
-            </FormGroup>
-            <FormGroup>
-                <Label for="number-of-weeks">Number Of Weeks</Label>
-                <Input id="number-of-weeks" type="number" onChange={(evt) => this.setState({ numberOfWeeks: parseInt(evt.target.value) })}/>
-            </FormGroup>
-          </Row>
-          <FormGroup>
-            <Label for="description">Season Description</Label>
-            <Input id="description" type="textarea" onChange={(evt) => this.setState({ description: evt.target.value })}/>
-          </FormGroup>
-          <Button type="submit" id="add-food-button" color="success">Create Food</Button>
-        </Form>
-      </div>
+                <Form onSubmit={this.handleAddSeason}>
+                <FormGroup>
+                    <Label for="season-name">Season Name</Label>
+                    <Input id="season-name" type="text" onChange={(evt) => this.setState({ name: evt.target.value })}/>
+                </FormGroup>
+                <FormGroup>
+                    <Label for="activity-name">Activity Name</Label>
+                    <Input id="activity-name" type="text" onChange={(evt) => this.setState({ activity: evt.target.value })}/>
+                </FormGroup>
+                <Row>
+                    <FormGroup>
+                        <Label for="start-date">Start Date</Label>
+                        <Input id="start-date" type="date" onChange={(evt) => this.setState({ startDate: evt.target.value })}/>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label for="number-of-weeks">Number Of Weeks</Label>
+                        <Input id="number-of-weeks" type="number" onChange={(evt) => this.setState({ numberOfWeeks: parseInt(evt.target.value) })}/>
+                    </FormGroup>
+                </Row>
+                <FormGroup>
+                    <Label for="description">Season Description</Label>
+                    <Input id="description" type="textarea" onChange={(evt) => this.setState({ description: evt.target.value })}/>
+                </FormGroup>
+                <Button type="submit" id="add-food-button" color="success">Create Food</Button>
+                </Form>
+            </div>
         )
     }
 }
