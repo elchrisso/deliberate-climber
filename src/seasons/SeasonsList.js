@@ -22,9 +22,8 @@ class SeasonsList extends Component {
             {seasons.map((season) => {
                 return (
                     <ListGroupItem className="justify-content-between">
-                <NavLink className="nav-link" to={`/seasons/details/${season.id}`}>{season.id}</NavLink>
-                <Badge pill>14</Badge>
-              </ListGroupItem>
+                        <NavLink className="nav-link" to={`/seasons/details/${season.id}`}>{season.name}</NavLink>
+                    </ListGroupItem>
                 )
             })}
         </ListGroup>

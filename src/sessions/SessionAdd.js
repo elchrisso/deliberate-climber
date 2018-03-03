@@ -26,7 +26,7 @@ class SessionAdd extends Component {
                         <Label for="description">Session Description</Label>
                         <Input id="description" type="textarea" onChange={(evt) => this.setState({ description: evt.target.value })}/>
                     </FormGroup>
-                    <Button type="submit" id="add-food-button" color="success">Create Food</Button>
+                    <Button type="submit" id="add-food-button" color="success">Add Session</Button>
                 </Form>
             </div>
         )

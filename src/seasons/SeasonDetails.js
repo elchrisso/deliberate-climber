@@ -16,8 +16,13 @@ class SeasonDetails extends Component {
             <div>
                 <h1>{this.props.data.Season.name}</h1>
                 {this.props.data.Season.sessions.map((session) => {
+                    const myDate = Date.parse(session.date)
                     return (
-                        <p>{session.date}, {session.type}</p>
+                        <p>{new Intl.DateTimeFormat('en-US', { 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: '2-digit' 
+                        }).format(myDate)}, {session.type}</p>
                     )
                 })}
                 <SessionList/>
